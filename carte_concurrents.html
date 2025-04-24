@@ -1,0 +1,790 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Carte des concurrents</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #map {{ width: 100%; height: 100vh; }}
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([50.5, 5.5], 8);
+    L.tileLayer('https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png', {{
+      attribution: '&copy; OpenStreetMap contributors'
+    }}).addTo(map);
+
+    function getColor(note) {{
+      if (note === 5) return '#800000';
+      if (note === 4) return '#B22222';
+      if (note === 3) return '#DC143C';
+      if (note === 2) return '#FF6347';
+      if (note === 1) return '#FFA07A';
+      return '#999';
+    }}
+
+
+    L.circleMarker([50.5081117, 5.370841], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Ciméo – Cabanes dans les arbres</b><br>Villers-le-Temple<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.3870946, 5.23958], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La Ferme du Ry – Bulle transparente</b><br>Havelange<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.0358705, 4.321416517933619], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>7 Sources – Dômes géodésiques</b><br>Chimay<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.6724649, 5.0779916], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Le Scandin'Havre – Yourte & wellness</b><br>Hannut<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.4920654, 5.8627569], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La Cabane du Bois Dormant</b><br>Spa<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.465055, 4.859976], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Le Moulin des Saules</b><br>Proche de Namur<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.56084485, 4.170484556877113], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Evernest Eco Dôme</b><br>Écaussinnes<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.51744, 5.933482], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La Yourte de Bouddha</b><br>Sart-Lez-Spa<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.4359066, 5.1238439], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La Roulotte de Baya</b><br>Ohey<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.50742, 5.22709], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La Cabane du Beau Vallon</b><br>Entre Namur et Dinant<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.465055, 4.859976], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La Cabane du Chêne</b><br>Près de Namur<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.304636, 4.769483], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>AquaLodge</b><br>Maredsous<br>Note: 4 étoiles");
+        
+    L.circleMarker([49.8041891, 5.3600282], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Mon Lit dans l’Arbre</b><br>Martilly<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.1323761, 5.7886928], {
+      radius: 8,
+      fillColor: getColor(5),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Les Cabanes de Rensiwez</b><br>Houffalize<br>Note: 5 étoiles");
+        
+    L.circleMarker([49.8149117, 5.7268150473328365], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Nutchel Forest Camp</b><br>Martelange<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.3101511, 4.8776042], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La Cabane de Poupette</b><br>Anhée (Namur)<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.3762043, 4.8675024], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Le Dôme de Namur</b><br>Profondeville<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.2213, 5.49358], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Slow Cabins</b><br>En Wallonie (lieu secret)<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.2858086, 5.7921558], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Domaine de Bra</b><br>Lierneux<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.5592528, 5.9647526], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La Yourte du Bois Dormant</b><br>Jalhay<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.4265348, 6.0276059], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La Cabane de l’Ours</b><br>Malmedy<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.29305, 5.6761462], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Bulle du Val d'Or</b><br>Manhay<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.4920654, 5.8627569], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Domaine de Mambaye</b><br>Spa<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.0516361, 4.6270287], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Cabane La Cachette</b><br>Viroinval<br>Note: 3 étoiles");
+        
+    L.circleMarker([49.94990995, 5.437089151361523], {
+      radius: 8,
+      fillColor: getColor(5),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Oduo Cabane & Spa</b><br>Libramont<br>Note: 5 étoiles");
+        
+    L.circleMarker([50.5055291, 5.6617176], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La Roulotte de Charme</b><br>Sprimont<br>Note: 3 étoiles");
+        
+    L.circleMarker([49.7356402, 5.592928298869271], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Les Nids des Marais</b><br>Habay<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.3870946, 5.23958], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Un Lit sous les Étoiles</b><br>Havelange<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.1608117, 5.6809237], {
+      radius: 8,
+      fillColor: getColor(5),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>The Forest Dome</b><br>Nadrin (Houffalize)<br>Note: 5 étoiles");
+        
+    L.circleMarker([50.1602833, 5.562759403213439], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Le Cocoon du Parc</b><br>La Roche-en-Ardenne<br>Note: 4 étoiles");
+        
+    L.circleMarker([49.9411216, 5.0168496], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Le Lov'nid du Moulin</b><br>Bièvre<br>Note: 3 étoiles");
+        
+    L.circleMarker([49.6820986, 5.5185152], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Dôme Bulle Étoilée</b><br>Tintigny<br>Note: 4 étoiles");
+        
+    L.circleMarker([49.9792667, 4.9388966], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Les Cabanes du Bois Clair</b><br>Gedinne<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.15542, 5.1752822], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Domaine de la Carrière</b><br>Rochefort<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.1102739, 4.9549279], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La Tente Lotus du Bocage</b><br>Beauraing<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.4069504, 5.80836], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Cabane du Bois Dormant</b><br>Stoumont<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.2930558, 5.5597642], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La Bulle d'Oxygène</b><br>Erezée<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.2842154, 5.9162783], {
+      radius: 8,
+      fillColor: getColor(2),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Les Tipis de la Forêt</b><br>Vielsalm<br>Note: 2 étoiles");
+        
+    L.circleMarker([50.3524116, 5.456248], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Cocoon Village</b><br>Durbuy<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.6305665, 6.0312717], {
+      radius: 8,
+      fillColor: getColor(5),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Tree Bubble</b><br>Eupen<br>Note: 5 étoiles");
+        
+    L.circleMarker([50.3726812, 5.8702957], {
+      radius: 8,
+      fillColor: getColor(5),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>The Fox & The Forest</b><br>Trois-Ponts<br>Note: 5 étoiles");
+        
+    L.circleMarker([50.4127007, 5.599880676106696], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Dôme du Bois</b><br>Ferrières<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.0516361, 4.6270287], {
+      radius: 8,
+      fillColor: getColor(2),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Tipi Nature de Viroin</b><br>Viroinval<br>Note: 2 étoiles");
+        
+    L.circleMarker([50.2265147, 5.3407365], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Le Nid Cosy</b><br>Marche-en-Famenne<br>Note: 3 étoiles");
+        
+    L.circleMarker([49.8041891, 5.3600282], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Mon Lit dans l’Arbre – Martilly</b><br>Martilly, Herbeumont<br>Note: 4 étoiles");
+        
+    L.circleMarker([nan, nan], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Les Cabanes de Marie – Arquennes</b><br>Arquennes (près de Nivelles)<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.5023427, 4.2156931], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Le Rand’eau – Chalet-bateau à Bois d’Haine</b><br>Bois d’Haine (Hainaut)<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.4920654, 5.8627569], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La Cabane du Bois Dormant – Spa</b><br>Spa (Liège)<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.2964911, 5.1008664], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Les Nids des Marais – Ciney</b><br>Ciney (Namur)<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.5727285, 4.5342675], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Les Cabanes Champêtres – Villers-la-Ville</b><br>Villers-la-Ville (Brabant Wallon)<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.5081117, 5.370841], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Ciméo Tree Lodges – Villers-le-Temple</b><br>Villers-le-Temple (Nandrin, Liège)<br>Note: 4 étoiles");
+        
+    L.circleMarker([nan, nan], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La Sphair – Spa</b><br>Spa (province de Liège)<br>Note: 3 étoiles");
+        
+    L.circleMarker([49.830822, 5.736286], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Les Cabanes Nutchel – Martelange</b><br>Martelange (province de Luxembourg)<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.410548, 5.065211], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>In The Woods – Gesves</b><br>Gesves (province de Namur)<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.295534, 5.097976], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La Cabane du Potager – Ciney</b><br>Ciney (province de Namur)<br>Note: 4 étoiles");
+        
+    L.circleMarker([nan, nan], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Le Chant des Étoiles – Spa</b><br>Spa (province de Liège)<br>Note: 4 étoiles");
+        
+    L.circleMarker([49.810564, 5.4811649], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Le dôme Divin</b><br>Bernimont (Luxembourg)<br>Note: 3 étoiles");
+        
+    L.circleMarker([49.7949836, 5.0672528], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Home Sweet Dôme</b><br>Bouillon<br>Note: 3 étoiles");
+        
+    L.circleMarker([49.7949836, 5.0672528], {
+      radius: 8,
+      fillColor: getColor(2),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Bulle time flies</b><br>Bouillon (Luxembourg)<br>Note: 2 étoiles");
+        
+    L.circleMarker([50.0524906, 4.4955009], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Dôme Design BY OUT & LODGE</b><br>Couvin<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.6652169, 5.2627409], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Dôme romantique avec vue panoramique</b><br>Faimés<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.2909634, 5.5355083], {
+      radius: 8,
+      fillColor: getColor(1),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Sphair perchée</b><br>Fisenne (Luxembourg)<br>Note: 1 étoiles");
+        
+    L.circleMarker([50.724179, 4.8679997], {
+      radius: 8,
+      fillColor: getColor(2),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Nuit pour deux dans une bulle au milieu des prés</b><br>Jodoigne<br>Note: 2 étoiles");
+        
+    L.circleMarker([49.94990995, 5.437089151361523], {
+      radius: 8,
+      fillColor: getColor(2),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Dormir au coeur du brame (/)</b><br>Libramont<br>Note: 2 étoiles");
+        
+    L.circleMarker([49.94990995, 5.437089151361523], {
+      radius: 8,
+      fillColor: getColor(2),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La Stmasphair + La SaintHub + La SPHAIR</b><br>Libramont-Chevigny<br>Note: 2 étoiles");
+        
+    L.circleMarker([49.94990995, 5.437089151361523], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Bulle Anima'Sphair</b><br>Libramont-Chevigny<br>Note: 3 étoiles");
+        
+    L.circleMarker([49.94990995, 5.437089151361523], {
+      radius: 8,
+      fillColor: getColor(2),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Sphair de Freux</b><br>Libramont-Chevigny<br>Note: 2 étoiles");
+        
+    L.circleMarker([50.2265147, 5.3407365], {
+      radius: 8,
+      fillColor: getColor(2),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Au clair de ma bulle</b><br>Marche (Luxembourg)<br>Note: 2 étoiles");
+        
+    L.circleMarker([50.4416402, 4.9846704], {
+      radius: 8,
+      fillColor: getColor(2),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La bulle du ruisseau</b><br>Mozet (Namur)<br>Note: 2 étoiles");
+        
+    L.circleMarker([50.5162261, 5.399256390627551], {
+      radius: 8,
+      fillColor: getColor(4),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Ciméo</b><br>Nandrin<br>Note: 4 étoiles");
+        
+    L.circleMarker([50.663437, 5.259302], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Sphair aux merveilles – Faimes</b><br>Faimes (province de Liège)<br>Note: 3 étoiles");
+        
+    L.circleMarker([nan, nan], {
+      radius: 8,
+      fillColor: getColor(2),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Sphair perchée – Fisenne</b><br>Fisenne (province de Luxembourg)<br>Note: 2 étoiles");
+        
+    L.circleMarker([50.724179, 4.8679997], {
+      radius: 8,
+      fillColor: getColor(2),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Nuit pour deux dans une bulle au milieu des prés – Jodoigne</b><br>Jodoigne (Brabant Wallon)<br>Note: 2 étoiles");
+        
+    L.circleMarker([49.917587, 5.376336], {
+      radius: 8,
+      fillColor: getColor(2),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Dormir au cœur du brame – Libramont</b><br>Libramont (province de Luxembourg)<br>Note: 2 étoiles");
+        
+    L.circleMarker([49.917587, 5.376336], {
+      radius: 8,
+      fillColor: getColor(2),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La Stmasphair + La SaintHub + La SPHAIR – Libramont-Chevigny</b><br>Libramont-Chevigny (province de Luxembourg)<br>Note: 2 étoiles");
+        
+    L.circleMarker([50.2803881, 6.1258953], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Séjour Insolite Dôme sous les Étoiles</b><br>Saint Vith<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.16800915, 4.211193355451652], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Glamping moon/earth/sun</b><br>Sivry-Rance<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.313722850000005, 5.32122569803292], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La bulle du Bon'Heure</b><br>Somme-Leuze<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.2597292, 4.98106], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Ferme du Ry</b><br>Sorinnes (Dinant)<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.6533204, 5.8625239], {
+      radius: 8,
+      fillColor: getColor(2),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Le Dôme de l'Îlot Vert</b><br>Thimister-Clermont<br>Note: 2 étoiles");
+        
+    L.circleMarker([50.5368559, 5.2143865], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Sleep in a Bubble</b><br>Wanze<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.3260425, 4.877815], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>NOCTAMBULLE</b><br>Yvoir<br>Note: 3 étoiles");
+        
+    L.circleMarker([50.3260425, 4.877815], {
+      radius: 8,
+      fillColor: getColor(2),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>La bulle de Mont</b><br>Yvoir<br>Note: 2 étoiles");
+        
+    L.circleMarker([49.56853, 5.53505], {
+      radius: 8,
+      fillColor: getColor(3),
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    }).addTo(map).bindPopup("<b>Refuge du Clos des Horlès</b><br>Virton (province de Luxembourg)<br>Note: 3 étoiles");
+        
+  </script>
+</body>
+</html>
